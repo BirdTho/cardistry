@@ -92,7 +92,7 @@ class ElderScrollsLegendsAPI {
     this.axiosInstance = Axios.create({
       baseURL: ELDER_SCROLLS_LEGENDS_API_URL,
       responseType: 'json',
-      adapter: this.cache,
+      adapter: this.cache.adapter,
     });
 
     return true;
@@ -109,8 +109,9 @@ class ElderScrollsLegendsAPI {
     if (!this.axiosInstance) {
       await this.setup();
     }
+
     return await this.axiosInstance.get('/cards', {
-      data: {
+      params: {
         page,
         pageSize,
       },
@@ -123,7 +124,7 @@ class ElderScrollsLegendsAPI {
       await this.setup();
     }
     return await this.axiosInstance.get('/keywords', {
-      data: {
+      params: {
         page,
         pageSize,
       },

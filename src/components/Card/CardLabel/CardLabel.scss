@@ -1,0 +1,37 @@
+
+@import "../../../shared-css/Mixins";
+
+.card-label {
+  @include card-formatting;
+
+  $labelHeight: 24px;
+
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: $labelHeight / 2;
+  line-height: 19px;
+  padding: 0 4px;
+  width: auto;
+  height: $labelHeight;
+  border-radius: $labelHeight / 2;
+
+  &.with-supertext {
+    line-height: $labelHeight;
+    padding: 0 4px 0 12px;
+  }
+
+  .supertext {
+    left: 7px;
+    display: block;
+    line-height: $labelHeight / 3;
+    font-size: $labelHeight / 3;
+    position: absolute;
+    color: #919191;
+  }
+
+  .main {
+    margin-left: 3px;
+    margin-right: 2px;
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './ErrorRetry.scss';
+import './ErrorPrinter.scss';
 
 export default React.memo(function (props) {
   const {
-    onRetryClick
+    children,
   } = props;
 
   return (
@@ -12,8 +12,7 @@ export default React.memo(function (props) {
       <div className={'error-hazards left'}/>
       <div className={'error-hazards right'}/>
       <div className={'error-border'}>
-        <button className={'button'} onClick={onRetryClick}>
-          Load failed, Retry?</button>
+        <p>{children}</p>
       </div>
     </div>
   )

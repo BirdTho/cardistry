@@ -1,0 +1,16 @@
+@import '../../shared-css/Mixins';
+
+// Button CSS reset from https://css-tricks.com/overriding-default-button-styles/
+// Would extract to importable CSS, but this might be the only button I use in the whole project.
+
+.error-container {
+  @include widebar(240px, 50px, 7px);
+
+  .error-border {
+    > p {
+      width: 200px;
+      margin: 0 auto;
+      word-wrap: normal;
+    }
+  }
+}

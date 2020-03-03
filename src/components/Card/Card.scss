@@ -1,0 +1,122 @@
+@import "../../shared-css/Mixins";
+
+.card {
+  position: relative;
+  display: inline-block;
+  text-align: initial;
+  margin: 15px;
+  width: 330px;
+  background-color: #0069ed;
+  height: 278px;
+
+  .card-image-container {
+    position: relative;
+    display: block;
+    //background-color: blue;
+    width: 245px;
+    height: 244px;
+    overflow: hidden;
+    margin: 0;
+
+    .card-border {
+      background-color: black;
+      top: -115px;
+      left: -58px;
+      width: 360px;
+      height: 590px;
+      position: absolute;
+      clip-path: polygon(17% 24%, 50% 20%, 83% 24%, 75% 53%, 50% 60%, 25% 53%);
+    }
+
+    .card-image {
+      top: -111px;
+      left: -53px;
+      width: 350px;
+      height: 580px;
+      position: absolute;
+      clip-path: polygon(17% 24%, 50% 20%, 83% 24%, 75% 53%, 50% 60%, 25% 53%);
+    }
+  }
+
+  .card-cost {
+    position: absolute;
+    display: block;
+    top: 35px;
+    left: 0;
+    background: rgb(59,255,56);
+    background: -moz-radial-gradient(circle, rgba(59,255,56,1) 0%, rgba(33,105,35,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(59,255,56,1) 0%, rgba(33,105,35,1) 100%);
+    background: radial-gradient(circle, rgba(59,255,56,1) 0%, rgba(33,105,35,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3bff38",endColorstr="#216923",GradientType=1);
+    border: 1.5px solid black;
+
+
+    $circle-diameter: 30px;
+    width: $circle-diameter;
+    height: $circle-diameter;
+    border-radius: $circle-diameter / 2;
+
+    > span {
+      font-weight: bold;
+      font-size: 26px;
+      display: inline-block;
+      text-align: center;
+      width: 30px;
+    }
+  }
+
+  .card-label-container {
+    position: absolute;
+    display: block;
+    left: 117px;
+    top: 0;
+    height: 234px;
+    width: 250px;
+
+    .card-label {
+      position: absolute;
+      $y-stagger: 35px;
+      $x-stagger: 0px;
+      $y-off: 35px;
+      $x-off: 80px;
+
+      @for $i from 0 to 5 {
+        &:nth-child(#{$i + 1}) {
+
+          left: $x-off + ($i * $x-stagger);
+          top: $y-off + ($i * $y-stagger);
+          @if $i > 0 {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+
+  .card-description {
+    @include card-formatting;
+
+    $labelHeight: 24px;
+
+    position: absolute;
+    left: 22px;
+    top: 170px;
+    box-sizing: border-box;
+    font-size: $labelHeight / 2;
+    line-height: 19px;
+    padding: 0 4px;
+    width: 200px;
+    height: auto;
+    border-radius: $labelHeight / 4;
+
+    .description {
+      margin-block-start: 0;
+      margin-block-end: 0.5em;
+    }
+
+    .card-attribute {
+      font-size: $labelHeight / 2.5;
+      margin-right: 5px;
+    }
+  }
+}

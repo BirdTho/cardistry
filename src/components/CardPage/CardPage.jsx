@@ -4,6 +4,8 @@ import Async from 'react-async';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import ErrorRetry from '../ErrorRetry/ErrorRetry';
 
+import ErrorPrinter from '../ErrorPrinter/ErrorPrinter';
+
 import elderScrollsLegendsAPI from '../../api/ElderScrollsLegendsAPI';
 
 import './CardPage.scss';
@@ -60,6 +62,33 @@ export default class CardPage extends React.Component {
       status,
     } = response;
 
+    if (status >= 400) {
+      let message = null;
+      switch (status) {
+        case 400:
+          message = 'Bad Request';
+          break;
+        case 403:
+          message = 'Request rate limit exceeded';
+          break;
+        case 404:
+          message = 'The requested resource could not be found.';
+          break;
+        case 500:
+          message = 'Remote API server has internal problem, try again later.';
+          break;
+        case 503:
+          message = 'API is offline for maintenance, try again later.';
+          break;
+        default:
+      }
+      if (message) {
+        return (<ErrorPrinter>{message}</ErrorPrinter>)
+      } else {
+        return (<ErrorRetry onRetryClick={this.onRetryClick}/>);
+      }
+    }
+
     return cards.map((card, i) => <Card card={card} key={i}/>)
   };
 
@@ -71,7 +100,7 @@ export default class CardPage extends React.Component {
     } = this;
 
     return (
-      <Async promiseFn={cardsPromise}>
+      <Async promise={cardsPromise}>
         <Async.Pending><LoadingSpinner/></Async.Pending>
         <Async.Rejected><ErrorRetry onRetryClick={onRetryClick}/></Async.Rejected>
         <Async.Fulfilled>{data => getCards(data)}</Async.Fulfilled>
