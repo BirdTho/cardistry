@@ -1,0 +1,47 @@
+@import '../../../../shared-css/Mixins';
+
+.search-container {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 20px;
+
+  .searchbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include search-formatting;
+  }
+  .clear-btn {
+    @include button-reset;
+
+    padding: 0;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    right: 1px;
+    top: 0;
+    position: absolute;
+
+    .cross {
+      $length: 10px;
+      $width: 2px;
+
+      position: absolute;
+      top: 5px;
+      left: 9px;
+
+      background-color: #d6d6d6;
+      width: $width;
+      height: $length;
+      border-radius: $width / 2;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,794 +1,932 @@
 [
   {
-    "id": 1,
-    "name": "Agility",
+    "value": "Agility",
     "type": "attributes",
-    "_value": "Agility"
+    "_value": [
+      "Agility"
+    ]
   },
   {
-    "id": 2,
-    "name": "Endurance",
+    "value": "Endurance",
     "type": "attributes",
-    "_value": "Endurance"
+    "_value": [
+      "Endurance"
+    ]
   },
   {
-    "id": 3,
-    "name": "Intelligence",
+    "value": "Intelligence",
     "type": "attributes",
-    "_value": "Intelligence"
+    "_value": [
+      "Intelligence"
+    ]
   },
   {
-    "id": 4,
-    "name": "Neutral",
+    "value": "Neutral",
     "type": "attributes",
-    "_value": "Neutral"
+    "_value": [
+      "Neutral"
+    ]
   },
   {
-    "id": 5,
-    "name": "Strength",
+    "value": "Strength",
     "type": "attributes",
-    "_value": "Strength"
+    "_value": [
+      "Strength"
+    ]
   },
   {
-    "id": 6,
-    "name": "Willpower",
+    "value": "Willpower",
     "type": "attributes",
-    "_value": "Willpower"
+    "_value": ["Willpower"]
   },
   {
-    "id": 7,
-    "name": "Common",
+    "value": "Archer",
+    "type": "attributes",
+    "_value": ["Strength,Agility"]
+  },
+  {
+    "value": "Assassin",
+    "type": "attributes",
+    "_value": ["Intelligence,Agility"]
+  },
+  {
+    "value": "Battlemage",
+    "type": "attributes",
+    "_value": ["Intelligence,Strength"]
+  },
+  {
+    "value": "Crusader",
+    "type": "attributes",
+    "_value": ["Strength,Willpower"]
+  },
+  {
+    "value": "Mage",
+    "type": "attributes",
+    "_value": ["Intelligence,Willpower"]
+  },
+  {
+    "value": "Monk",
+    "type": "attributes",
+    "_value": ["Agility,Willpower"]
+  },
+  {
+    "value": "Scout",
+    "type": "attributes",
+    "_value": ["Agility,Endurance"]
+  },
+  {
+    "value": "Sorcerer",
+    "type": "attributes",
+    "_value": ["Intelligence,Endurance"]
+  },
+  {
+    "value": "Spellsword",
+    "type": "attributes",
+    "_value": ["Willpower,Endurance"]
+  },
+  {
+    "value": "Warrior",
+    "type": "attributes",
+    "_value": ["Strength,Endurance"]
+  },
+  {
+    "value": "Common",
     "type": "rarity",
-    "_value": "Common"
+    "_value": [
+      "Common"
+    ]
   },
   {
-    "id": 8,
-    "name": "Epic",
+    "value": "Epic",
     "type": "rarity",
-    "_value": "Epic"
+    "_value": [
+      "Epic"
+    ]
   },
   {
-    "id": 9,
-    "name": "Rare",
+    "value": "Rare",
     "type": "rarity",
-    "_value": "Rare"
+    "_value": [
+      "Rare"
+    ]
   },
   {
-    "id": 10,
-    "name": "Legendary",
+    "value": "Legendary",
     "type": "rarity",
-    "_value": "Legendary"
+    "_value": [
+      "Legendary"
+    ]
   },
   {
-    "id": 11,
-    "name": "Isle of Madness",
+    "value": "Isle of Madness",
     "type": "set.name",
-    "_value": "Isle of Madness"
+    "_value": [
+      "Isle of Madness"
+    ]
   },
   {
-    "id": 12,
-    "name": "iom",
+    "value": "iom",
     "type": "set.id",
-    "_value": "iom"
+    "_value": [
+      "iom"
+    ]
   },
   {
-    "id": 13,
-    "name": "Alliance War",
+    "value": "Alliance War",
     "type": "set.name",
-    "_value": "Alliance War"
+    "_value": [
+      "Alliance War"
+    ]
   },
   {
-    "id": 14,
-    "name": "aw",
+    "value": "aw",
     "type": "set.id",
-    "_value": "aw"
+    "_value": [
+      "aw"
+    ]
   },
   {
-    "id": 15,
-    "name": "Moons of Elsweyr",
+    "value": "Moons of Elsweyr",
     "type": "set.name",
-    "_value": "Moons of Elsweyr"
+    "_value": [
+      "Moons of Elsweyr"
+    ]
   },
   {
-    "id": 16,
-    "name": "moe",
+    "value": "moe",
     "type": "set.id",
-    "_value": "moe"
+    "_value": [
+      "moe"
+    ]
   },
   {
-    "id": 17,
-    "name": "Promotional Cards",
+    "value": "Promotional Cards",
     "type": "set.name",
-    "_value": "Promotional Cards"
+    "_value": [
+      "Promotional Cards"
+    ]
   },
   {
-    "id": 18,
-    "name": "pc",
+    "value": "pc",
     "type": "set.id",
-    "_value": "pc"
+    "_value": [
+      "pc"
+    ]
   },
   {
-    "id": 19,
-    "name": "Core Set",
+    "value": "Core Set",
     "type": "set.name",
-    "_value": "Core Set"
+    "_value": [
+      "Core Set"
+    ]
   },
   {
-    "id": 20,
-    "name": "cs",
+    "value": "cs",
     "type": "set.id",
-    "_value": "cs"
+    "_value": [
+      "cs"
+    ]
   },
   {
-    "id": 21,
-    "name": "Madhouse Collection",
+    "value": "Madhouse Collection",
     "type": "set.name",
-    "_value": "Madhouse Collection"
+    "_value": [
+      "Madhouse Collection"
+    ]
   },
   {
-    "id": 22,
-    "name": "mc",
+    "value": "mc",
     "type": "set.id",
-    "_value": "mc"
+    "_value": [
+      "mc"
+    ]
   },
   {
-    "id": 23,
-    "name": "Monthly Rewards",
+    "value": "Monthly Rewards",
     "type": "set.name",
-    "_value": "Monthly Rewards"
+    "_value": [
+      "Monthly Rewards"
+    ]
   },
   {
-    "id": 24,
-    "name": "mr",
+    "value": "mr",
     "type": "set.id",
-    "_value": "mr"
+    "_value": [
+      "mr"
+    ]
   },
   {
-    "id": 25,
-    "name": "The Fall of the Dark Brotherhood",
+    "value": "The Fall of the Dark Brotherhood",
     "type": "set.name",
-    "_value": "The Fall of the Dark Brotherhood"
+    "_value": [
+      "The Fall of the Dark Brotherhood"
+    ]
   },
   {
-    "id": 26,
-    "name": "fodb",
+    "value": "fodb",
     "type": "set.id",
-    "_value": "fodb"
+    "_value": [
+      "fodb"
+    ]
   },
   {
-    "id": 27,
-    "name": "Heroes of Skyrim",
+    "value": "Heroes of Skyrim",
     "type": "set.name",
-    "_value": "Heroes of Skyrim"
+    "_value": [
+      "Heroes of Skyrim"
+    ]
   },
   {
-    "id": 28,
-    "name": "hos",
+    "value": "hos",
     "type": "set.id",
-    "_value": "hos"
+    "_value": [
+      "hos"
+    ]
   },
   {
-    "id": 29,
-    "name": "Return to Clockwork City",
+    "value": "Return to Clockwork City",
     "type": "set.name",
-    "_value": "Return to Clockwork City"
+    "_value": [
+      "Return to Clockwork City"
+    ]
   },
   {
-    "id": 30,
-    "name": "rcc",
+    "value": "rcc",
     "type": "set.id",
-    "_value": "rcc"
+    "_value": [
+      "rcc"
+    ]
   },
   {
-    "id": 31,
-    "name": "Forgotten Hero Collection",
+    "value": "Forgotten Hero Collection",
     "type": "set.name",
-    "_value": "Forgotten Hero Collection"
+    "_value": [
+      "Forgotten Hero Collection"
+    ]
   },
   {
-    "id": 32,
-    "name": "fhc",
+    "value": "fhc",
     "type": "set.id",
-    "_value": "fhc"
+    "_value": [
+      "fhc"
+    ]
   },
   {
-    "id": 33,
-    "name": "Houses of Morrowind",
+    "value": "Houses of Morrowind",
     "type": "set.name",
-    "_value": "Houses of Morrowind"
+    "_value": [
+      "Houses of Morrowind"
+    ]
   },
   {
-    "id": 34,
-    "name": "hom",
+    "value": "hom",
     "type": "set.id",
-    "_value": "hom"
+    "_value": [
+      "hom"
+    ]
   },
   {
-    "id": 35,
-    "name": "FrostSpark Collection",
+    "value": "FrostSpark Collection",
     "type": "set.name",
-    "_value": "FrostSpark Collection"
+    "_value": [
+      "FrostSpark Collection"
+    ]
   },
   {
-    "id": 36,
-    "name": "fsc",
+    "value": "fsc",
     "type": "set.id",
-    "_value": "fsc"
+    "_value": [
+      "fsc"
+    ]
   },
   {
-    "id": 37,
-    "name": "Assemble",
+    "value": "Assemble",
     "type": "keywords",
-    "_value": "Assemble"
+    "_value": [
+      "Assemble"
+    ]
   },
   {
-    "id": 38,
-    "name": "Betray",
+    "value": "Betray",
     "type": "keywords",
-    "_value": "Betray"
+    "_value": [
+      "Betray"
+    ]
   },
   {
-    "id": 39,
-    "name": "Breajthrough",
+    "value": "Breakthrough",
     "type": "keywords",
-    "_value": "Breajthrough"
+    "_value": [
+      "Breakthrough",
+      "Breajthrough"
+    ]
   },
   {
-    "id": 40,
-    "name": "Breakthrough",
+    "value": "Charge",
     "type": "keywords",
-    "_value": "Breakthrough"
+    "_value": [
+      "Charge"
+    ]
   },
   {
-    "id": 41,
-    "name": "Charge",
+    "value": "Consume",
     "type": "keywords",
-    "_value": "Charge"
+    "_value": [
+      "Consume"
+    ]
   },
   {
-    "id": 42,
-    "name": "Consume",
+    "value": "Drain",
     "type": "keywords",
-    "_value": "Consume"
+    "_value": [
+      "Drain"
+    ]
   },
   {
-    "id": 43,
-    "name": "Drain",
+    "value": "Empower",
     "type": "keywords",
-    "_value": "Drain"
+    "_value": [
+      "Empower"
+    ]
   },
   {
-    "id": 44,
-    "name": "Empower",
+    "value": "Exalt",
     "type": "keywords",
-    "_value": "Empower"
+    "_value": [
+      "Exalt"
+    ]
   },
   {
-    "id": 45,
-    "name": "Exalt",
+    "value": "Expertise",
     "type": "keywords",
-    "_value": "Exalt"
+    "_value": [
+      "Expertise"
+    ]
   },
   {
-    "id": 46,
-    "name": "Expertise",
+    "value": "Guard",
     "type": "keywords",
-    "_value": "Expertise"
+    "_value": [
+      "Guard",
+      " Guard"
+    ]
   },
   {
-    "id": 47,
-    "name": "Guard",
+    "value": "Last Gasp",
     "type": "keywords",
-    "_value": "Guard"
+    "_value": [
+      "Last Gasp",
+      "Lasp Gasp"
+    ]
   },
   {
-    "id": 48,
-    "name": " Guard",
+    "value": "Lethal",
     "type": "keywords",
-    "_value": " Guard"
+    "_value": [
+      "Lethal",
+      "Letha"
+    ]
   },
   {
-    "id": 49,
-    "name": "Lasp Gasp",
+    "value": "Mobilize",
     "type": "keywords",
-    "_value": "Lasp Gasp"
+    "_value": [
+      "Mobilize"
+    ]
   },
   {
-    "id": 50,
-    "name": "Last Gasp",
+    "value": "Pilfer",
     "type": "keywords",
-    "_value": "Last Gasp"
+    "_value": [
+      "Pilfer"
+    ]
   },
   {
-    "id": 51,
-    "name": "Letha",
+    "value": "Plot",
     "type": "keywords",
-    "_value": "Letha"
+    "_value": [
+      "Plot"
+    ]
   },
   {
-    "id": 52,
-    "name": "Lethal",
+    "value": "Prophecy",
     "type": "keywords",
-    "_value": "Lethal"
+    "_value": [
+      "Prophecy",
+      "Propechy"
+    ]
   },
   {
-    "id": 53,
-    "name": "Mobilize",
+    "value": "Rally",
     "type": "keywords",
-    "_value": "Mobilize"
+    "_value": [
+      "Rally"
+    ]
   },
   {
-    "id": 54,
-    "name": "Pilfer",
+    "value": "Regenerate",
     "type": "keywords",
-    "_value": "Pilfer"
+    "_value": [
+      "Regenerate"
+    ]
   },
   {
-    "id": 55,
-    "name": "Plot",
+    "value": "Shackle",
     "type": "keywords",
-    "_value": "Plot"
+    "_value": [
+      "Shackle"
+    ]
   },
   {
-    "id": 56,
-    "name": "Propechy",
+    "value": "Silence",
     "type": "keywords",
-    "_value": "Propechy"
+    "_value": [
+      "Silence",
+      "Silenc"
+    ]
   },
   {
-    "id": 57,
-    "name": "Prophecy",
+    "value": "Slay",
     "type": "keywords",
-    "_value": "Prophecy"
+    "_value": [
+      "Slay"
+    ]
   },
   {
-    "id": 58,
-    "name": "Rally",
+    "value": "Treasure Hunt",
     "type": "keywords",
-    "_value": "Rally"
+    "_value": [
+      "Treasure Hunt"
+    ]
   },
   {
-    "id": 59,
-    "name": "Regenerate",
+    "value": "Veteran",
     "type": "keywords",
-    "_value": "Regenerate"
+    "_value": [
+      "Veteran"
+    ]
   },
   {
-    "id": 60,
-    "name": "Shackle",
+    "value": "Wane",
     "type": "keywords",
-    "_value": "Shackle"
+    "_value": [
+      "Wane",
+      "Wayne"
+    ]
   },
   {
-    "id": 61,
-    "name": "Silenc",
+    "value": "Ward",
     "type": "keywords",
-    "_value": "Silenc"
+    "_value": [
+      "Ward"
+    ]
   },
   {
-    "id": 62,
-    "name": "Silence",
+    "value": "Wax",
     "type": "keywords",
-    "_value": "Silence"
+    "_value": [
+      "Wax"
+    ]
   },
   {
-    "id": 63,
-    "name": "Slay",
-    "type": "keywords",
-    "_value": "Slay"
-  },
-  {
-    "id": 64,
-    "name": "Treasure Hunt",
-    "type": "keywords",
-    "_value": "Treasure Hunt"
-  },
-  {
-    "id": 65,
-    "name": "Veteran",
-    "type": "keywords",
-    "_value": "Veteran"
-  },
-  {
-    "id": 66,
-    "name": "Wane",
-    "type": "keywords",
-    "_value": "Wane"
-  },
-  {
-    "id": 67,
-    "name": "Ward",
-    "type": "keywords",
-    "_value": "Ward"
-  },
-  {
-    "id": 68,
-    "name": "Wax",
-    "type": "keywords",
-    "_value": "Wax"
-  },
-  {
-    "id": 69,
-    "name": "Wayne",
-    "type": "keywords",
-    "_value": "Wayne"
-  },
-  {
-    "id": 70,
-    "name": "Action",
+    "value": "Action",
     "type": "type",
-    "_value": "Action"
+    "_value": [
+      "Action"
+    ]
   },
   {
-    "id": 71,
-    "name": "Creature",
+    "value": "Creature",
     "type": "type",
-    "_value": "Creature"
+    "_value": [
+      "Creature"
+    ]
   },
   {
-    "id": 72,
-    "name": "Item",
+    "value": "Item",
     "type": "type",
-    "_value": "Item"
+    "_value": [
+      "Item"
+    ]
   },
   {
-    "id": 73,
-    "name": "Support",
+    "value": "Support",
     "type": "type",
-    "_value": "Support"
+    "_value": [
+      "Support"
+    ]
   },
   {
-    "id": 74,
-    "name": "Animal",
+    "value": "Animal",
     "type": "subtypes",
-    "_value": "Animal"
+    "_value": [
+      "Animal"
+    ]
   },
   {
-    "id": 75,
-    "name": "Argonian",
+    "value": "Argonian",
     "type": "subtypes",
-    "_value": "Argonian"
+    "_value": [
+      "Argonian"
+    ]
   },
   {
-    "id": 76,
-    "name": "Ash Creature",
+    "value": "Ash Creature",
     "type": "subtypes",
-    "_value": "Ash Creature"
+    "_value": [
+      "Ash Creature"
+    ]
   },
   {
-    "id": 77,
-    "name": "Atronach",
+    "value": "Atronach",
     "type": "subtypes",
-    "_value": "Atronach"
+    "_value": [
+      "Atronach"
+    ]
   },
   {
-    "id": 78,
-    "name": "Beast",
+    "value": "Beast",
     "type": "subtypes",
-    "_value": "Beast"
+    "_value": [
+      "Beast"
+    ]
   },
   {
-    "id": 79,
-    "name": "Breton",
+    "value": "Breton",
     "type": "subtypes",
-    "_value": "Breton"
+    "_value": [
+      "Breton"
+    ]
   },
   {
-    "id": 80,
-    "name": "Centaur",
+    "value": "Centaur",
     "type": "subtypes",
-    "_value": "Centaur"
+    "_value": [
+      "Centaur"
+    ]
   },
   {
-    "id": 81,
-    "name": "Chaurus",
+    "value": "Chaurus",
     "type": "subtypes",
-    "_value": "Chaurus"
+    "_value": [
+      "Chaurus"
+    ]
   },
   {
-    "id": 82,
-    "name": "Daedra",
+    "value": "Daedra",
     "type": "subtypes",
-    "_value": "Daedra"
+    "_value": [
+      "Daedra"
+    ]
   },
   {
-    "id": 83,
-    "name": "Dark Elf",
+    "value": "Dark Elf",
     "type": "subtypes",
-    "_value": "Dark Elf"
+    "_value": [
+      "Dark Elf"
+    ]
   },
   {
-    "id": 84,
-    "name": "Defense",
+    "value": "Defense",
     "type": "subtypes",
-    "_value": "Defense"
+    "_value": [
+      "Defense"
+    ]
   },
   {
-    "id": 85,
-    "name": "Dragon",
+    "value": "Dragon",
     "type": "subtypes",
-    "_value": "Dragon"
+    "_value": [
+      "Dragon"
+    ]
   },
   {
-    "id": 86,
-    "name": "Dreugh",
+    "value": "Dreugh",
     "type": "subtypes",
-    "_value": "Dreugh"
+    "_value": [
+      "Dreugh"
+    ]
   },
   {
-    "id": 87,
-    "name": "Dwemer",
+    "value": "Dwemer",
     "type": "subtypes",
-    "_value": "Dwemer"
+    "_value": [
+      "Dwemer"
+    ]
   },
   {
-    "id": 88,
-    "name": "Elytra",
+    "value": "Elytra",
     "type": "subtypes",
-    "_value": "Elytra"
+    "_value": [
+      "Elytra"
+    ]
   },
   {
-    "id": 89,
-    "name": "Fabricant",
+    "value": "Fabricant",
     "type": "subtypes",
-    "_value": "Fabricant"
+    "_value": [
+      "Fabricant"
+    ]
   },
   {
-    "id": 90,
-    "name": "Factotum",
+    "value": "Factotum",
     "type": "subtypes",
-    "_value": "Factotum"
+    "_value": [
+      "Factotum"
+    ]
   },
   {
-    "id": 91,
-    "name": "Falmer",
+    "value": "Falmer",
     "type": "subtypes",
-    "_value": "Falmer"
+    "_value": [
+      "Falmer"
+    ]
   },
   {
-    "id": 92,
-    "name": "Fish",
+    "value": "Fish",
     "type": "subtypes",
-    "_value": "Fish"
+    "_value": [
+      "Fish"
+    ]
   },
   {
-    "id": 93,
-    "name": "Gargoyle",
+    "value": "Gargoyle",
     "type": "subtypes",
-    "_value": "Gargoyle"
+    "_value": [
+      "Gargoyle"
+    ]
   },
   {
-    "id": 94,
-    "name": "Giant",
+    "value": "Giant",
     "type": "subtypes",
-    "_value": "Giant"
+    "_value": [
+      "Giant"
+    ]
   },
   {
-    "id": 95,
-    "name": "Goblin",
+    "value": "Goblin",
     "type": "subtypes",
-    "_value": "Goblin"
+    "_value": [
+      "Goblin"
+    ]
   },
   {
-    "id": 96,
-    "name": "God",
+    "value": "God",
     "type": "subtypes",
-    "_value": "God"
+    "_value": [
+      "God"
+    ]
   },
   {
-    "id": 97,
-    "name": "Grummite",
+    "value": "Grummite",
     "type": "subtypes",
-    "_value": "Grummite"
+    "_value": [
+      "Grummite"
+    ]
   },
   {
-    "id": 98,
-    "name": "Harpy",
+    "value": "Harpy",
     "type": "subtypes",
-    "_value": "Harpy"
+    "_value": [
+      "Harpy"
+    ]
   },
   {
-    "id": 99,
-    "name": "High Elf",
+    "value": "High Elf",
     "type": "subtypes",
-    "_value": "High Elf"
+    "_value": [
+      "High Elf"
+    ]
   },
   {
-    "id": 100,
-    "name": "Imp",
+    "value": "Imp",
     "type": "subtypes",
-    "_value": "Imp"
+    "_value": [
+      "Imp"
+    ]
   },
   {
-    "id": 101,
-    "name": "Imperfect",
+    "value": "Imperfect",
     "type": "subtypes",
-    "_value": "Imperfect"
+    "_value": [
+      "Imperfect"
+    ]
   },
   {
-    "id": 102,
-    "name": "Imperial",
+    "value": "Imperial",
     "type": "subtypes",
-    "_value": "Imperial"
+    "_value": [
+      "Imperial"
+    ]
   },
   {
-    "id": 103,
-    "name": "Insect",
+    "value": "Insect",
     "type": "subtypes",
-    "_value": "Insect"
+    "_value": [
+      "Insect"
+    ]
   },
   {
-    "id": 104,
-    "name": "Khajiit",
+    "value": "Khajiit",
     "type": "subtypes",
-    "_value": "Khajiit"
+    "_value": [
+      "Khajiit"
+    ]
   },
   {
-    "id": 105,
-    "name": "Kwama",
+    "value": "Kwama",
     "type": "subtypes",
-    "_value": "Kwama"
+    "_value": [
+      "Kwama"
+    ]
   },
   {
-    "id": 106,
-    "name": "Lurcher",
+    "value": "Lurcher",
     "type": "subtypes",
-    "_value": "Lurcher"
+    "_value": [
+      "Lurcher"
+    ]
   },
   {
-    "id": 107,
-    "name": "Mammoth",
+    "value": "Mammoth",
     "type": "subtypes",
-    "_value": "Mammoth"
+    "_value": [
+      "Mammoth"
+    ]
   },
   {
-    "id": 108,
-    "name": "Mantikora",
+    "value": "Mantikora",
     "type": "subtypes",
-    "_value": "Mantikora"
+    "_value": [
+      "Mantikora"
+    ]
   },
   {
-    "id": 109,
-    "name": "Minotaur",
+    "value": "Minotaur",
     "type": "subtypes",
-    "_value": "Minotaur"
+    "_value": [
+      "Minotaur"
+    ]
   },
   {
-    "id": 110,
-    "name": "Mudcrab",
+    "value": "Mudcrab",
     "type": "subtypes",
-    "_value": "Mudcrab"
+    "_value": [
+      "Mudcrab"
+    ]
   },
   {
-    "id": 111,
-    "name": "Mummy",
+    "value": "Mummy",
     "type": "subtypes",
-    "_value": "Mummy"
+    "_value": [
+      "Mummy"
+    ]
   },
   {
-    "id": 112,
-    "name": "Nereid",
+    "value": "Nereid",
     "type": "subtypes",
-    "_value": "Nereid"
+    "_value": [
+      "Nereid"
+    ]
   },
   {
-    "id": 113,
-    "name": "Netch",
+    "value": "Netch",
     "type": "subtypes",
-    "_value": "Netch"
+    "_value": [
+      "Netch"
+    ]
   },
   {
-    "id": 114,
-    "name": "Nord",
+    "value": "Nord",
     "type": "subtypes",
-    "_value": "Nord"
+    "_value": [
+      "Nord"
+    ]
   },
   {
-    "id": 115,
-    "name": "Ogre",
+    "value": "Ogre",
     "type": "subtypes",
-    "_value": "Ogre"
+    "_value": [
+      "Ogre"
+    ]
   },
   {
-    "id": 116,
-    "name": "Orc",
+    "value": "Orc",
     "type": "subtypes",
-    "_value": "Orc"
+    "_value": [
+      "Orc"
+    ]
   },
   {
-    "id": 117,
-    "name": "Pastry",
+    "value": "Pastry",
     "type": "subtypes",
-    "_value": "Pastry"
+    "_value": [
+      "Pastry"
+    ]
   },
   {
-    "id": 118,
-    "name": "Reachman",
+    "value": "Reachman",
     "type": "subtypes",
-    "_value": "Reachman"
+    "_value": [
+      "Reachman"
+    ]
   },
   {
-    "id": 119,
-    "name": "Redguard",
+    "value": "Redguard",
     "type": "subtypes",
-    "_value": "Redguard"
+    "_value": [
+      "Redguard"
+    ]
   },
   {
-    "id": 120,
-    "name": "Reptile",
+    "value": "Reptile",
     "type": "subtypes",
-    "_value": "Reptile"
+    "_value": [
+      "Reptile"
+    ]
   },
   {
-    "id": 121,
-    "name": "Skeever",
+    "value": "Skeever",
     "type": "subtypes",
-    "_value": "Skeever"
+    "_value": [
+      "Skeever"
+    ]
   },
   {
-    "id": 122,
-    "name": "Skeleton",
+    "value": "Skeleton",
     "type": "subtypes",
-    "_value": "Skeleton"
+    "_value": [
+      "Skeleton"
+    ]
   },
   {
-    "id": 123,
-    "name": "Spider",
+    "value": "Spider",
     "type": "subtypes",
-    "_value": "Spider"
+    "_value": [
+      "Spider"
+    ]
   },
   {
-    "id": 124,
-    "name": "Spirit",
+    "value": "Spirit",
     "type": "subtypes",
-    "_value": "Spirit"
+    "_value": [
+      "Spirit"
+    ]
   },
   {
-    "id": 125,
-    "name": "Spriggan",
+    "value": "Spriggan",
     "type": "subtypes",
-    "_value": "Spriggan"
+    "_value": [
+      "Spriggan"
+    ]
   },
   {
-    "id": 126,
-    "name": "Troll",
+    "value": "Troll",
     "type": "subtypes",
-    "_value": "Troll"
+    "_value": [
+      "Troll"
+    ]
   },
   {
-    "id": 127,
-    "name": "Vampire",
+    "value": "Vampire",
     "type": "subtypes",
-    "_value": "Vampire"
+    "_value": [
+      "Vampire"
+    ]
   },
   {
-    "id": 128,
-    "name": "Wamasu",
+    "value": "Wamasu",
     "type": "subtypes",
-    "_value": "Wamasu"
+    "_value": [
+      "Wamasu"
+    ]
   },
   {
-    "id": 129,
-    "name": "Werewolf",
+    "value": "Werewolf",
     "type": "subtypes",
-    "_value": "Werewolf"
+    "_value": [
+      "Werewolf"
+    ]
   },
   {
-    "id": 130,
-    "name": "Wolf",
+    "value": "Wolf",
     "type": "subtypes",
-    "_value": "Wolf"
+    "_value": [
+      "Wolf"
+    ]
   },
   {
-    "id": 131,
-    "name": "Wood Elf",
+    "value": "Wood Elf",
     "type": "subtypes",
-    "_value": "Wood Elf"
+    "_value": [
+      "Wood Elf"
+    ]
   },
   {
-    "id": 132,
-    "name": "Wraith",
+    "value": "Wraith",
     "type": "subtypes",
-    "_value": "Wraith"
+    "_value": [
+      "Wraith"
+    ]
   }
 ]

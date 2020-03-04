@@ -2,17 +2,11 @@
   "name": "cardistry",
   "version": "0.1.0",
   "private": true,
-  "peerDependencies": {
-    "react": ">= 16.x.x",
-    "react-native": ">= 0.55.x",
-    "react-native-vector-icons": ">= 6.x.x",
-    "react-native-dynamic-vector-icons": ">= x.x.x",
-    "@freakycoder/react-native-helpers": ">= 0.1.0"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@yaireo/tagify": "^3.6.1",
     "axios": "latest",
     "axios-cache-adapter": "^2.5.0",
     "classnames": "^2.2.6",

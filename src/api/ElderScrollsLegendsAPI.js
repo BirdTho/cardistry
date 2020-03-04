@@ -100,17 +100,18 @@ class ElderScrollsLegendsAPI {
 
   /**
    *
-   * @param page
-   * @param pageSize
+   * @param {number} page
+   * @param {number=} pageSize
+   * @param {string=} query
    * @return {Promise<AxiosResponse<CardsData>>}
    */
-  getCards = async (page, pageSize = 20) => {
+  getCards = async (page, pageSize = 20, query = '') => {
     // Jig to delay request until API caching is set up
     if (!this.axiosInstance) {
       await this.setup();
     }
 
-    return await this.axiosInstance.get('/cards', {
+    return await this.axiosInstance.get('/cards?' + query, {
       params: {
         page,
         pageSize,

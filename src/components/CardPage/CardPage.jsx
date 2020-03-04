@@ -25,6 +25,7 @@ export default class CardPage extends React.Component {
    * @param {{
    *   page: number,
    *   pageSize: number,
+   *   query: string=
    * }} props
    */
   constructor(props) {
@@ -36,12 +37,13 @@ export default class CardPage extends React.Component {
    */
   get cardsPromise() {
     let {
+      query,
       page,
       pageSize
     } = this.props;
     pageSize = pageSize || 20;
 
-    return elderScrollsLegendsAPI.getCards(page, pageSize);
+    return elderScrollsLegendsAPI.getCards(page, pageSize, query);
   }
 
   onRetryClick = () => {
