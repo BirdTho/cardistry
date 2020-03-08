@@ -42,7 +42,7 @@ export default function Card (props) {
       <div className={'card-description'}>
         {text && <p className={'description'}>{text}</p>}
         <span className={'card-attribute'}>Attributes: </span>
-        {attributes.map(attr => <span className={'card-attribute'}>{attr}</span>)}
+        {attributes.map((attr, i) => <span key={i} className={'card-attribute'}>{attr}</span>)}
       </div>
     </div>
   );

@@ -4,9 +4,10 @@
   position: relative;
   display: inline-block;
   text-align: initial;
+  overflow: hidden;
   margin: 15px;
   width: 330px;
-  background-color: #0069ed;
+  //background-color: #0069ed;
   height: 278px;
 
   .card-image-container {
@@ -77,10 +78,15 @@
       position: absolute;
       $y-stagger: 35px;
       $x-stagger: 0px;
-      $y-off: 35px;
-      $x-off: 80px;
+      $y-off: 5px;
+      $x-off: 75px;
 
-      @for $i from 0 to 5 {
+      &:nth-child(1) {
+        left: $x-off - 40px;
+        top: $y-off;
+      }
+
+      @for $i from 1 to 5 {
         &:nth-child(#{$i + 1}) {
 
           left: $x-off + ($i * $x-stagger);
@@ -96,7 +102,7 @@
   .card-description {
     @include card-formatting;
 
-    $labelHeight: 24px;
+    $labelHeight: 20px;
 
     position: absolute;
     left: 22px;

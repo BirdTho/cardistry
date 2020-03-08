@@ -6,8 +6,6 @@ import ErrorRetry from '../ErrorRetry/ErrorRetry';
 
 import ErrorPrinter from '../ErrorPrinter/ErrorPrinter';
 
-import elderScrollsLegendsAPI from '../../api/ElderScrollsLegendsAPI';
-
 import './CardPage.scss';
 import Card from '../Card/Card';
 
@@ -21,39 +19,6 @@ import Card from '../Card/Card';
  */
 export default class CardPage extends React.Component {
   /**
-   *
-   * @param {{
-   *   page: number,
-   *   pageSize: number,
-   *   query: string=
-   * }} props
-   */
-  constructor(props) {
-    super(props);
-  }
-
-  /**
-   * @return {Promise}
-   */
-  get cardsPromise() {
-    let {
-      query,
-      page,
-      pageSize
-    } = this.props;
-    pageSize = pageSize || 20;
-
-    return elderScrollsLegendsAPI.getCards(page, pageSize, query);
-  }
-
-  onRetryClick = () => {
-    // This component doesn't need a state per se, the <Async/> promise wrapper handles the loading states
-    // However if the loading fails and someone clicks "Retry", I should re-render for the opportunity to
-    // fetch the page of cards (if the API went down for some reason)
-    this.forceUpdate();
-  };
-
-  /**
    * @param {AxiosResponse.<CardsData>} response
    */
   getCards = (response) => {
@@ -63,6 +28,11 @@ export default class CardPage extends React.Component {
       },
       status,
     } = response;
+
+    const {
+      onLoaded,
+      keyIndex,
+    } = this.props;
 
     if (status >= 400) {
       let message = null;
@@ -91,21 +61,26 @@ export default class CardPage extends React.Component {
       }
     }
 
-    return cards.map((card, i) => <Card card={card} key={i}/>)
+    onLoaded(!!cards.length);
+    return cards.map((card, i) => <Card card={card} key={keyIndex + i}/>)
   };
 
   render() {
     const {
-      cardsPromise,
-      onRetryClick,
+      props: {
+        promise,
+        onRetryClick,
+      },
       getCards,
     } = this;
 
     return (
-      <Async promise={cardsPromise}>
+      <Async promise={promise}>
         <Async.Pending><LoadingSpinner/></Async.Pending>
         <Async.Rejected><ErrorRetry onRetryClick={onRetryClick}/></Async.Rejected>
-        <Async.Fulfilled>{data => getCards(data)}</Async.Fulfilled>
+        <Async.Fulfilled>{data => {
+            return getCards(data);
+          }}</Async.Fulfilled>
       </Async>
     )
   }

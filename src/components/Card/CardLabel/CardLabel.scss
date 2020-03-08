@@ -10,13 +10,14 @@
   display: inline-block;
   box-sizing: border-box;
   font-size: $labelHeight / 2;
-  line-height: 19px;
+  line-height: $labelHeight - 3px;
   padding: 0 4px;
   width: auto;
   height: $labelHeight;
   border-radius: $labelHeight / 2;
 
   &.with-supertext {
+    font-size: $labelHeight / 2 - 2px;
     line-height: $labelHeight;
     padding: 0 4px 0 12px;
   }
