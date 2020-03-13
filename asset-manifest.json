@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/cardistry/static/css/main.8f41f661.chunk.css",
+    "main.js": "/cardistry/static/js/main.113145d1.chunk.js",
+    "main.js.map": "/cardistry/static/js/main.113145d1.chunk.js.map",
+    "runtime-main.js": "/cardistry/static/js/runtime-main.33032e9b.js",
+    "runtime-main.js.map": "/cardistry/static/js/runtime-main.33032e9b.js.map",
+    "static/css/2.6000eced.chunk.css": "/cardistry/static/css/2.6000eced.chunk.css",
+    "static/js/2.f3dfdc48.chunk.js": "/cardistry/static/js/2.f3dfdc48.chunk.js",
+    "static/js/2.f3dfdc48.chunk.js.map": "/cardistry/static/js/2.f3dfdc48.chunk.js.map",
+    "index.html": "/cardistry/index.html",
+    "precache-manifest.e282a49d9df4a07fd5051a8355897a52.js": "/cardistry/precache-manifest.e282a49d9df4a07fd5051a8355897a52.js",
+    "service-worker.js": "/cardistry/service-worker.js",
+    "static/css/2.6000eced.chunk.css.map": "/cardistry/static/css/2.6000eced.chunk.css.map",
+    "static/css/main.8f41f661.chunk.css.map": "/cardistry/static/css/main.8f41f661.chunk.css.map",
+    "static/js/2.f3dfdc48.chunk.js.LICENSE.txt": "/cardistry/static/js/2.f3dfdc48.chunk.js.LICENSE.txt",
+    "static/media/basic-shield.5a64882a.svg": "/cardistry/static/media/basic-shield.5a64882a.svg",
+    "static/media/fight.9530ca76.svg": "/cardistry/static/media/fight.9530ca76.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33032e9b.js",
+    "static/css/2.6000eced.chunk.css",
+    "static/js/2.f3dfdc48.chunk.js",
+    "static/css/main.8f41f661.chunk.css",
+    "static/js/main.113145d1.chunk.js"
+  ]
+}
