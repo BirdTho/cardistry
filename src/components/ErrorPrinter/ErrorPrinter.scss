@@ -3,14 +3,20 @@
 // Button CSS reset from https://css-tricks.com/overriding-default-button-styles/
 // Would extract to importable CSS, but this might be the only button I use in the whole project.
 
-.error-container {
+.error-printer-container {
   @include widebar(240px, 50px, 7px);
 
   .error-border {
     > p {
-      width: 200px;
-      margin: 0 auto;
+      display: table-cell;
+      vertical-align: middle;
+
+      height: 50px;
+      width: 240px;
+      padding: 0 30px;
       word-wrap: normal;
+      font-size: 16px;
+      text-align: center;
     }
   }
 }

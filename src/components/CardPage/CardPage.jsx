@@ -6,16 +6,18 @@ import ErrorRetry from '../ErrorRetry/ErrorRetry';
 
 import ErrorPrinter from '../ErrorPrinter/ErrorPrinter';
 
-import './CardPage.scss';
 import Card from '../Card/Card';
 
 /*
  * The concept behind CardPage is to organize blocks of cards in 20s as arrays.
- * I really want this component to return an array rather than a single element with an array,
- * so hopefully it'll tile dynamically with other CardPage's cards. The cardpage can be responsible for querying
- * and letting the CardMultiDisplay know when it has updated successfully (this allowing the user to scroll down
- * and automatically load more cards). Without the success callback from loading, further autoloading in the
+ * I really want this component to return an array rather than a single element with an array of children
+ * so it'll tile dynamically with other CardPage's cards. The CardPage can be responsible for resolving and rendering
+ * the card API promise and tell CardMultiDisplay when it has updated successfully
+ * (this allowing the user to scroll down to automatically load more cards).
+ * Without the success callback from loading, further auto-loading in the
  * CardMultiDisplay will be halted.
+ *
+ * Because CardPage handles promise resolution, it also needs to tell CardMultiDisplay when there are no more cards.
  */
 export default class CardPage extends React.Component {
   /**
@@ -61,7 +63,7 @@ export default class CardPage extends React.Component {
       }
     }
 
-    onLoaded(!!cards.length);
+    onLoaded(cards.length === response.data._pageSize);
     return cards.map((card, i) => <Card card={card} key={keyIndex + i}/>)
   };
 

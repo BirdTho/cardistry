@@ -5,15 +5,16 @@
   display: inline-block;
   text-align: initial;
   overflow: hidden;
-  margin: 15px;
-  width: 330px;
-  //background-color: #0069ed;
+  margin: 0 0 10px 30px;
+  width: 300px;
   height: 278px;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
 
   .card-image-container {
     position: relative;
     display: block;
-    //background-color: blue;
     width: 245px;
     height: 244px;
     overflow: hidden;
@@ -82,7 +83,7 @@
       $x-off: 75px;
 
       &:nth-child(1) {
-        left: $x-off - 40px;
+        left: $x-off - 80px;
         top: $y-off;
       }
 
@@ -123,6 +124,56 @@
     .card-attribute {
       font-size: $labelHeight / 2.5;
       margin-right: 5px;
+    }
+  }
+
+  .stats {
+    @include card-formatting;
+
+    $font-size: 16px;
+
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 87px;
+    border-radius: 5px;
+
+    &__stat {
+      display: inline-list-item;
+      margin-left: 7px;
+      margin-right: 7px;
+      margin-bottom: 5px;
+    }
+
+    &__stat:first-child {
+      margin-top: 5px;
+      margin-bottom: 3px;
+    }
+
+    &__stat-text {
+      display: inline;
+      font-size: $font-size;
+      vertical-align: middle;
+    }
+
+    &__sword {
+      fill: #d6d6d6;
+      display: inline;
+      width: $font-size;
+      height: $font-size;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    &__shield {
+      fill: #d6d6d6;
+      display: inline;
+      width: 20px;
+      height: 20px;
+      margin-left: -2px;
+      margin-right: 2px;
+      margin-bottom: 1px;
+      vertical-align: middle;
     }
   }
 }

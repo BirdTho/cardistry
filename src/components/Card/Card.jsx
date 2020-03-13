@@ -1,7 +1,8 @@
 import React from 'react';
 
 import CardLabel from './CardLabel/CardLabel';
-
+import { ReactComponent as Swords } from './fight.svg';
+import { ReactComponent as Shield } from './basic-shield.svg';
 import './Card.scss';
 
 /**
@@ -21,6 +22,8 @@ export default function Card (props) {
       cost,
       attributes,
       rarity,
+      power,
+      health,
     }
   } = props;
 
@@ -30,6 +33,12 @@ export default function Card (props) {
         <div className={'card-border'}/>
         <img className={'card-image'} src={imageUrl} alt={name}/>
       </div>
+      {power != null && health != null ? (
+      <div className={'stats'}>
+        <div className={'stats__stat'}><Swords className={'stats__sword'}/><span className={'stats__stat-text'}>{power}</span></div>
+        <div className={'stats__stat'}><Shield className={'stats__shield'}/><span className={'stats__stat-text'}>{health}</span></div>
+      </div>
+        ): null}
       <div className={'card-label-container'}>
         <CardLabel text={name}/>
         <CardLabel superscript={'Type'} text={type}/>

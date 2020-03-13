@@ -8,7 +8,7 @@ export default React.memo(function (props) {
   } = props;
 
   return (
-    <div className={'error-container'}>
+    <div className={'error-retry-container'}>
       <div className={'error-hazards left'}/>
       <div className={'error-hazards right'}/>
       <div className={'error-border'}>

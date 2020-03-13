@@ -14,7 +14,7 @@ const tagsSettings = {
   enforceWhitelist: true,
   editTags: false,
   whitelist,
-  placeholder: 'Add filter tags for keywords, types, sets, attributes',
+  placeholder: 'Add tags to filter results',
   autoComplete: {
     enabled: true,
   },
@@ -28,6 +28,9 @@ const tagsSettings = {
   skipInvalid: true,
 };
 
+// QueryBuilder is a single source of truth for the search terms.
+// It handles garthering search terms and tags as well as dispatching the command to search through
+// the onSearch() command.
 export default class QueryBuilder extends React.Component {
   /**
    * @param {{
@@ -41,6 +44,16 @@ export default class QueryBuilder extends React.Component {
       tags: [],
       query: '',
     };
+
+    if (this.props.setState) {
+      this._setState = this.setState;
+      this.setState = function () {
+        try {
+          this.props.setState(...arguments)
+        } catch(e) {}
+        this._setState.apply(this, arguments);
+      }
+    }
   }
 
   onSubmit = () => {

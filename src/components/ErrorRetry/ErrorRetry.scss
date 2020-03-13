@@ -1,16 +1,19 @@
 @import '../../shared-css/Mixins';
 
-.error-container {
+.error-retry-container {
   @include widebar(240px, 50px, 7px);
 
   .error-border {
     // Generated styling from https://www.bestcssbuttongenerator.com/#/4
+
     > button.button {
       @include button-reset;
 
+      display: block;
+      width: 204px;
+      margin: 7px auto 0;
       background-color: #ffffff;
       border: 1px solid #454545;
-      display: inline-block;
       cursor: pointer;
       color: #454545;
       font-family: Arial, sans-serif;

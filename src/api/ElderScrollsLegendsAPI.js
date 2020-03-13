@@ -118,19 +118,6 @@ class ElderScrollsLegendsAPI {
       },
     });
   };
-
-  getKeywords = async (page, pageSize) => {
-    // Jig to delay request until API caching is set up
-    if (!this.axiosInstance) {
-      await this.setup();
-    }
-    return await this.axiosInstance.get('/keywords', {
-      params: {
-        page,
-        pageSize,
-      },
-    });
-  };
 }
 
 export default new ElderScrollsLegendsAPI();
