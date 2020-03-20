@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "879dcc0e893f8d86f3995fde1b776026",
+    "revision": "7d5529e6749c62b2c55081f59dd0fbc3",
     "url": "/cardistry/index.html"
   },
   {
-    "revision": "7856539f745cadf86020",
+    "revision": "1da5d78b263e3fab2bba",
     "url": "/cardistry/static/css/2.6000eced.chunk.css"
   },
   {
-    "revision": "b9b65fbdae9251031dd7",
+    "revision": "697df5e45590bb232534",
     "url": "/cardistry/static/css/main.8f41f661.chunk.css"
   },
   {
-    "revision": "7856539f745cadf86020",
-    "url": "/cardistry/static/js/2.f3dfdc48.chunk.js"
+    "revision": "1da5d78b263e3fab2bba",
+    "url": "/cardistry/static/js/2.02aa3217.chunk.js"
   },
   {
     "revision": "6cede3e9e7bec0bf81a1b4f6826000aa",
-    "url": "/cardistry/static/js/2.f3dfdc48.chunk.js.LICENSE.txt"
+    "url": "/cardistry/static/js/2.02aa3217.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b9b65fbdae9251031dd7",
-    "url": "/cardistry/static/js/main.113145d1.chunk.js"
+    "revision": "697df5e45590bb232534",
+    "url": "/cardistry/static/js/main.1b3032c6.chunk.js"
   },
   {
     "revision": "e27ca246cbf9b1f36868",
