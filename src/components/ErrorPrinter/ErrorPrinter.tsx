@@ -2,7 +2,11 @@ import React from 'react';
 
 import './ErrorPrinter.scss';
 
-export default React.memo(function (props) {
+interface ErrorPrinterProps {
+    children: any
+}
+
+export default React.memo(function (props:ErrorPrinterProps) {
   const {
     children,
   } = props;

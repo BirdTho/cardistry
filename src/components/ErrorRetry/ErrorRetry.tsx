@@ -2,7 +2,11 @@ import React from 'react';
 
 import './ErrorRetry.scss';
 
-export default React.memo(function (props) {
+interface ErrorRetryProps {
+    onRetryClick: () => void
+}
+
+export default React.memo(function (props: ErrorRetryProps) {
   const {
     onRetryClick
   } = props;

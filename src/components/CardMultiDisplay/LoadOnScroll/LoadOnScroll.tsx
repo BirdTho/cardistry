@@ -2,8 +2,14 @@ import React from 'react';
 
 import './LoadOnScroll.scss';
 
-export default class LoadOnScroll extends React.PureComponent {
-  constructor(props) {
+interface LoadOnScrollProps {
+  onLoad: () => void,
+}
+
+export default class LoadOnScroll extends React.PureComponent<LoadOnScrollProps> {
+  ref: any;
+
+  constructor(props: LoadOnScrollProps) {
     super(props);
 
     this.ref = React.createRef();

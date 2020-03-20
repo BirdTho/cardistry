@@ -1,12 +1,23 @@
 import React from 'react';
 import Async from 'react-async';
 
+import {AxiosResponse} from "axios";
+import {CardsData} from "../../api/ElderScrollsLegendsAPI";
+
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import ErrorRetry from '../ErrorRetry/ErrorRetry';
 
 import ErrorPrinter from '../ErrorPrinter/ErrorPrinter';
 
 import Card from '../Card/Card';
+
+interface CardPageProp {
+  onLoaded: (hasMore: boolean) => void,
+  keyIndex: number,
+  promise: Promise<AxiosResponse<CardsData>>,
+  onRetryClick: () => void,
+  key: any,
+}
 
 /*
  * The concept behind CardPage is to organize blocks of cards in 20s as arrays.
@@ -19,11 +30,11 @@ import Card from '../Card/Card';
  *
  * Because CardPage handles promise resolution, it also needs to tell CardMultiDisplay when there are no more cards.
  */
-export default class CardPage extends React.Component {
+export default class CardPage extends React.Component<CardPageProp> {
   /**
    * @param {AxiosResponse.<CardsData>} response
    */
-  getCards = (response) => {
+  getCards = (response: AxiosResponse<CardsData>) => {
     const {
       data: {
         cards,
@@ -34,6 +45,7 @@ export default class CardPage extends React.Component {
     const {
       onLoaded,
       keyIndex,
+      onRetryClick,
     } = this.props;
 
     if (status >= 400) {
@@ -59,7 +71,7 @@ export default class CardPage extends React.Component {
       if (message) {
         return (<ErrorPrinter>{message}</ErrorPrinter>)
       } else {
-        return (<ErrorRetry onRetryClick={this.onRetryClick}/>);
+        return (<ErrorRetry onRetryClick={onRetryClick}/>);
       }
     }
 
@@ -80,7 +92,7 @@ export default class CardPage extends React.Component {
       <Async promise={promise}>
         <Async.Pending><LoadingSpinner/></Async.Pending>
         <Async.Rejected><ErrorRetry onRetryClick={onRetryClick}/></Async.Rejected>
-        <Async.Fulfilled>{data => {
+        <Async.Fulfilled>{(data: AxiosResponse<CardsData>) => {
             return getCards(data);
           }}</Async.Fulfilled>
       </Async>

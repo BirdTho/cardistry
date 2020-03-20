@@ -3,11 +3,12 @@ import React from 'react';
 import SearchBar from './SearchBar/SearchBar';
 import Tags from "@yaireo/tagify/dist/react.tagify";
 
-import data from '../../../model/filterTags.json';
+import filterTags, {CardFilterTags} from '../../../model/CardFilterTags';
 
 import './QueryBuilder.scss';
+import {SearchParams} from "../CardMultiDisplay";
 
-const whitelist = data;
+const whitelist = filterTags;
 
 const tagsSettings = {
   duplicates: false,
@@ -28,16 +29,23 @@ const tagsSettings = {
   skipInvalid: true,
 };
 
+interface QueryBuilderProps {
+  onSearch: (params: SearchParams) => void,
+  setState?: any,
+}
+
+interface QueryBuilderState {
+  tags: CardFilterTags[],
+  query: string,
+}
+
 // QueryBuilder is a single source of truth for the search terms.
 // It handles garthering search terms and tags as well as dispatching the command to search through
 // the onSearch() command.
-export default class QueryBuilder extends React.Component {
-  /**
-   * @param {{
-   *   onSearch: function(Object)
-   * }} props
-   */
-  constructor(props) {
+export default class QueryBuilder extends React.Component<QueryBuilderProps, QueryBuilderState> {
+  _setState?: any;
+
+  constructor(props: QueryBuilderProps) {
     super(props);
 
     this.state = {
@@ -45,11 +53,13 @@ export default class QueryBuilder extends React.Component {
       query: '',
     };
 
+    this._setState = function () {};
+
     if (this.props.setState) {
       this._setState = this.setState;
       this.setState = function () {
         try {
-          this.props.setState(...arguments)
+          this.props.setState(...arguments);
         } catch(e) {}
         this._setState.apply(this, arguments);
       }
@@ -68,11 +78,11 @@ export default class QueryBuilder extends React.Component {
     });
   };
 
-  onSearchChange = val => {
+  onSearchChange = (val: string) => {
     this.setState({ query: val });
   };
 
-  onTagChange = e => {
+  onTagChange = (e: any) => {
     this.setState({ tags: e.detail.tagify.value });
   };
 

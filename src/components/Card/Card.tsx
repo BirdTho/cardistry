@@ -4,6 +4,11 @@ import CardLabel from './CardLabel/CardLabel';
 import { ReactComponent as Swords } from './fight.svg';
 import { ReactComponent as Shield } from './basic-shield.svg';
 import './Card.scss';
+import {CardData} from "../../api/ElderScrollsLegendsAPI";
+
+interface CardProps {
+  card: CardData
+}
 
 /**
  *
@@ -11,7 +16,7 @@ import './Card.scss';
  * @return {*}
  * @constructor
  */
-export default function Card (props) {
+export default function Card (props: CardProps) {
   const {
     card: {
       imageUrl,

@@ -5,10 +5,33 @@ import QueryBuilder from './QueryBuilder/QueryBuilder';
 import elderScrollsLegendsAPI from '../../api/ElderScrollsLegendsAPI';
 import LoadOnScroll from './LoadOnScroll/LoadOnScroll';
 
+import { CardFilterTags } from "../../model/CardFilterTags";
+
 import './CardMultiDisplay.scss';
 
-export default class CardMultiDisplay extends React.Component {
-  constructor (props) {
+export interface SearchParams {
+  tags: CardFilterTags[],
+  query: string,
+}
+
+interface CardMultiDisplayProps {
+  pageSize: number,
+  setState?: any,
+}
+
+interface CardMultiDisplayState {
+  query: string,
+  pageNumber: number,
+  counter: number,
+  pages: any,
+  loading: boolean,
+  hasMore: boolean,
+}
+
+export default class CardMultiDisplay extends React.Component<CardMultiDisplayProps, CardMultiDisplayState> {
+  _setState: any;
+
+  constructor (props: CardMultiDisplayProps) {
     super(props);
 
     // Counter is used to increment keys for card pages since pageNumber resets on new searches.
@@ -33,7 +56,7 @@ export default class CardMultiDisplay extends React.Component {
       this.setState = function () {
         try {
           this.props.setState(...arguments)
-        } catch(e) {};
+        } catch(e) {}
         this._setState.apply(this, arguments);
       }
     }
@@ -56,25 +79,20 @@ export default class CardMultiDisplay extends React.Component {
    * "Breakthrough|Breajthrough" under the heading of "Breakthrough"
    * See src/model/filterTags.json which were pulled from each category of search type: Attributes, Type,
    * Subtype, Set, Rarity (and any other I may have failed to mention)
-   *
-   * @param {{
-   *   tags: Array.<{}>,
-   *   query: string,
-   * }} params
    */
-  onSearch = (params) => {
+  onSearch = (params: SearchParams) => {
     const {
       tags, query,
     } = params;
 
-    let filters = {};
+    let filters: {[key: string]: string[]} = {};
 
     // Using concat to avoid mutating JSON data
-    tags.forEach(tag => {
+    tags.forEach((tag: CardFilterTags) => {
       if (filters[tag.type]) {
         filters[tag.type] = filters[tag.type].concat(tag._value);
       } else {
-        filters[tag.type] = [].concat(tag._value);
+        filters[tag.type] = [...tag._value];
       }
     });
 
@@ -105,7 +123,7 @@ export default class CardMultiDisplay extends React.Component {
   };
 
   // Only do this if the query changed, effectively handles the "search" button
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps: CardMultiDisplayProps, prevState: CardMultiDisplayState) {
     if (this.state.query !== prevState.query) {
       this.addPage();
     }
@@ -120,10 +138,10 @@ export default class CardMultiDisplay extends React.Component {
 
   // Have no opportunity to test atm, since the queries never seem to fail.
   // Tries reloading a card page in place by creating a new one and splicing it into the place of the old one.
-  retryPage(counter, pageIndex, pageNumber, pageSize, query) {
-    let pages = [].concat(this.state.pages);
+  retryPage(counter: number, pageIndex: number, pageNumber: number, pageSize: number, query: string) {
+    let pages = [...this.state.pages];
 
-    pages.splice(pageIndex, 1, (<CardPage
+    pages.splice(pageIndex, 1, (<CardPage keyIndex={counter * pageSize}
       key={counter} promise={elderScrollsLegendsAPI.getCards(pageNumber, pageSize, query)}
       onRetryClick={() => this.retryPage(counter, pageIndex, pageNumber, pageSize, query)}
       onLoaded={() => this.setState({ loading: false })}
@@ -147,14 +165,14 @@ export default class CardMultiDisplay extends React.Component {
 
     const promise = elderScrollsLegendsAPI.getCards(pageNumber, pageSize, query);
     const pageIndex = this.state.pages.length;
-    let pages = [].concat(this.state.pages, (
+    let pages = [...this.state.pages, (
       <CardPage
         key={counter} promise={promise} keyIndex={counter * pageSize}
         onRetryClick={() => this.retryPage(counter, pageIndex, pageNumber, pageSize, query)}
-        onLoaded={(hasMore) => {
+        onLoaded={(hasMore: boolean) => {
           this.setState({ loading: false, hasMore });
         }}
-      />));
+      />)];
 
     this.setState({
       pages,

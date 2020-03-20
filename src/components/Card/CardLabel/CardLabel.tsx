@@ -3,15 +3,12 @@ import cn from 'classnames';
 
 import './CardLabel.scss';
 
-/**
- *
- * @param {{
- *   text: string,
- *   superscript: string=,
- * }} props
- * @return {*}
- */
-export default props => {
+interface CardLabelProps {
+  superscript?: string | null | undefined,
+  text: string,
+}
+
+export default (props: CardLabelProps) => {
   const {
     superscript,
     text,

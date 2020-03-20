@@ -9,9 +9,9 @@ export default {
   decorators: [withKnobs],
 };
 
-const firstArg = decorate([args => [JSON.stringify(args[0], function (key, value) {
+const firstArg = decorate([args => [JSON.stringify(args[0], function (key, value: any) {
   if (key === 'pages') {
-    return `[${value.map(({key}) => `{page key={${key}}}`).join(', ')}]`;
+    return `[${value.map(({key}: any) => `{page key={${key}}}`).join(', ')}]`;
   } else {
     return value;
   }

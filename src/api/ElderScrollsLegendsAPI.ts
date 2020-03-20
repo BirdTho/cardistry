@@ -1,55 +1,47 @@
-import Axios from 'axios';
+import Axios, { AxiosInstance, AxiosResponse, AxiosAdapter } from 'axios';
+
 import localForage from 'localforage';
 import memoryDriver from 'localforage-memoryStorageDriver';
 import { setupCache } from 'axios-cache-adapter';
 
 const ELDER_SCROLLS_LEGENDS_API_URL = 'https://api.elderscrollslegends.io/v1';
 
-/**
- * @typedef {{
- *   data: T,
- *   status: number,
- *   statusText: string,
- *   headers: *,
- *   config: *,
- * }} AxiosResponse
- */
+export interface CardData {
+  name: string,
+  rarity: string,
+  type: string,
+  subtypes?: string[],
+  cost: number,
+  power?: number,
+  health?: number,
+  set: {
+    id: string,
+    name: string,
+    _self: string
+  },
+  soulSummon: number,
+  soulTrap: number,
+  text: string,
+  attributes: string[],
+  keywords?: string[],
+  unique: boolean,
+  imageUrl: string,
+  id: string
+}
 
-/**
- * @typedef {{
- *   name: string,
- *   rarity: string,
- *   type: string,
- *   subtypes: Array.<string>,
- *   cost: number,
- *   power: number,
- *   health: number,
- *   set: {
- *     id: string,
- *     name: string,
- *     _self: string
- *   },
- *   soulSummon: number,
- *   soulTrap: number,
- *   text: string,
- *   attributes: Array.<string>,
- *   keywords: Array.<string>,
- *   unique: boolean,
- *   imageUrl: string,
- *   id: string
- * }} CardData
- */
-
-/**
- * @typedef {{
- *   cards: Array.<CardData>,
- *   _pageSize: number,
- *   _totalCount: number,
- *   _links: string,
- * }} CardsData
- */
+export interface CardsData {
+  cards: CardData[],
+  _pageSize: number,
+  _totalCount: number,
+  _links: string,
+}
 
 class ElderScrollsLegendsAPI {
+  axiosInstance: AxiosInstance | null;
+  promise: Promise<boolean> | null;
+  localForage: any;
+  cache: any;
+
   constructor() {
     this.axiosInstance = null;
     this.promise = null;
@@ -57,9 +49,8 @@ class ElderScrollsLegendsAPI {
 
   /**
    * Jig to call _setup only once. Returns a singleton.
-   * @return {Promise}
    */
-  setup() {
+  setup(): Promise<boolean> {
     if (!this.promise) {
       this.promise = this._setup();
     }
@@ -67,7 +58,7 @@ class ElderScrollsLegendsAPI {
     return this.promise;
   }
 
-  _setup = async () => {
+  _setup = async (): Promise<boolean> => {
     await localForage.defineDriver(memoryDriver);
 
     this.localForage = localForage.createInstance({
@@ -105,12 +96,14 @@ class ElderScrollsLegendsAPI {
    * @param {string=} query
    * @return {Promise<AxiosResponse<CardsData>>}
    */
-  getCards = async (page, pageSize = 20, query = '') => {
+  getCards = async (page: number, pageSize: number = 20, query: string = ''): Promise<AxiosResponse<CardsData>> => {
     // Jig to delay request until API caching is set up
     if (!this.axiosInstance) {
       await this.setup();
     }
-
+    if (!this.axiosInstance) {
+      throw Error('Could not set up axios instance');
+    }
     return await this.axiosInstance.get('/cards?' + query, {
       params: {
         page,

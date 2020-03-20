@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ErrorBarDecorator = (draw) => {
+export const ErrorBarDecorator = (draw: () => any) => {
   return (
     <div style={{
       width: '100vw',

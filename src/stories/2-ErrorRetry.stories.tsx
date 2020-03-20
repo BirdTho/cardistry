@@ -11,7 +11,7 @@ export default {
 };
 
 export const PrintsAnError = () => {
-  return (<ErrorRetry onRetryClick={action('onRetryClick')}>{'This thing is broken, I suggest clicking it.'}</ErrorRetry>);
+  return (<ErrorRetry onRetryClick={action('onRetryClick')}/>);
 };
 
 PrintsAnError.story = {
