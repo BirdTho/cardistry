@@ -13,7 +13,7 @@
     "react": "^16.13.0",
     "react-async": "^10.0.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,7 +47,7 @@
     "@storybook/addon-viewport": "^5.3.14",
     "@storybook/addons": "^5.3.14",
     "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.14",
+    "@storybook/react": "^7.0.9",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
